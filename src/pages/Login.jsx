@@ -1,11 +1,9 @@
 import { useState } from "react";
-
 import { signInWithEmailAndPassword } from "firebase/auth";
-
 import { auth } from "../services/firebase";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const nav = useNavigate();
@@ -24,10 +22,12 @@ export default function Login() {
   return (
     <form onSubmit={login}>
       <h2>Login</h2>
-      <input placeholder="Correo electrónico" onChange={e => setEmail(e.target.value)} />
-      <input type="password" placeholder="Contraseña" onChange={e => setPass(e.target.value)} />
+      <input required placeholder="Correo electrónico" onChange={e => setEmail(e.target.value)} />
+      <input required type="password" placeholder="Contraseña" onChange={e => setPass(e.target.value)} />
       <button>Ingresar</button>
       <Link to="/register">Registrarse</Link>
     </form>
   );
 }
+
+export default Login
