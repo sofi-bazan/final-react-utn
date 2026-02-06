@@ -9,3 +9,87 @@ body {
   background: #EEF0EB;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 320px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #F4F9E9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form h2{
+  text-align: center;
+  color: #284B63;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #B4B8AB;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #284B63;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #284B63;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d374a;
+}
+
+a {
+  text-align: center;
+  color: #284B63;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dashboard {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #F4F9E9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #284B63;
+}
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  background: #EEF0EB;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+.tarea button {
+  background: #284B63;
+}
+
+.tarea button:hover {
+  background: #c53d3d;
+}
