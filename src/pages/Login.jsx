@@ -10,14 +10,19 @@ const Login = () => {
   const [pass, setPass] = useState("");
   const nav = useNavigate();
 
+  const [error, setError] = useState("");
+
   // manejo de errores login
   const login = async e => {
   e.preventDefault();
+  setError("");
+
   try {
       await signInWithEmailAndPassword(auth, email, pass);
       nav("/dashboard");
     } catch (err) {
       console.log("Error login:", err.message);
+      setError("Contraseña o correo electrónico incorrectos");
     }
   };
 
@@ -27,6 +32,7 @@ const Login = () => {
       <input required type="email" placeholder="Correo electrónico" onChange={e => setEmail(e.target.value)} />
       <input required type="password" placeholder="Contraseña" onChange={e => setPass(e.target.value)} />
       <button>Ingresar</button>
+      <p className="error">{error}</p>
       <Link to="/register">Registrarse</Link>
       <Link to="/about">Acerca del Proyecto</Link>
     </form>

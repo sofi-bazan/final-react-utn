@@ -11,6 +11,8 @@ export default function Dashboard() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
+  const [error, setError] = useState("");
+
   useEffect(() => {
     if (!user) return;
 
@@ -23,7 +25,12 @@ export default function Dashboard() {
   }, [user]);
 
   const addTask = async () => {
-    if (!task.trim()) return;
+    if (!task.trim()){
+      setError("La tarea está vacía");
+      return;
+    } 
+    setError("");
+
     await addDoc(collection(db, "tasks"), { name: task, userId: user.uid });
     setTask("");
   };
@@ -36,7 +43,8 @@ export default function Dashboard() {
     <div className="dashboard">
       <h2>Dashboard</h2>
       <input name="task" placeholder="Nueva tarea..." value={task} onChange={e => setTask(e.target.value)} />
-      <button onClick={addTask}>Agregar</button>
+      <button onClick={addTask} className="btn-ppal">Agregar</button>
+      {error && <p className="error">{error}</p>}
 
       {tasks.map(t => (
         <div key={t.id} className="tarea">
@@ -48,7 +56,7 @@ export default function Dashboard() {
         </div>
       ))}
 
-      <button onClick={() => signOut(auth)}>
+      <button className="btn-ppal" onClick={() => signOut(auth)}>
         Cerrar sesión
       </button>
     </div>

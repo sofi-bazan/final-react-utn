@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana;
 }
 
 body {
@@ -52,6 +52,11 @@ button:hover {
   background: #1d374a;
 }
 
+.btn-ppal{
+  width: 300px;
+  align-self: center;
+}
+
 a {
   text-align: center;
   color: #284B63;
@@ -67,29 +72,87 @@ a:hover {
   max-width: 700px;
   margin: 40px auto;
   background: #F4F9E9;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .dashboard h2 {
   text-align: center;
-  margin-bottom: 15px;
   color: #284B63;
+  margin-bottom: 10px;
 }
 
 .tarea {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #EEF0EB;
-  padding: 10px;
-  margin-top: 8px;
-  border-radius: 6px;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.tarea:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
 .tarea button {
   background: #284B63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
 }
 
 .tarea button:hover {
   background: #c53d3d;
+}
+
+.error{
+  color: #c53d3d;
+  text-align: center;
+}
+
+
+.about {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #F4F9E9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+  text-align: center;
+  color: #284B63;
+  margin-bottom: 20px;
+}
+
+.about h3 {
+  color: #284B63;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.about li {
+  margin-bottom: 5px;
+  color: #333;
 }
