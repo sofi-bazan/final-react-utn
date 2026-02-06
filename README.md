@@ -1,16 +1,28 @@
-# React + Vite
+# Proyecto Final – React JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Acerca del Proyecto
 
-Currently, two official plugins are available:
+### Descripción
+Esta aplicación web fue desarrollada como **trabajo final integrador en React JS**.  
+Permite a los usuarios **registrarse, iniciar sesión y gestionar tareas** desde un panel principal (dashboard).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación simula un entorno básico de productividad donde cada usuario puede administrar sus tareas luego de autenticarse.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React JS** – Biblioteca principal para la construcción de la interfaz.
+- **Firebase** – Utilizado para autenticación y almacenamiento de datos.
+- **CSS nativo** – Para el diseño y estilos de la aplicación.
+- **React Router** – Manejo de rutas y navegación entre páginas.
+- **Context API** – Gestión global del estado de autenticación.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Instalación y ejecución en entorno local
+
+Para ejecutar el proyecto localmente:
+
+1. Clonar el repositorio:
+git clone https://github.com/sofi-bazan/final-react-utn.git
